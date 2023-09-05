@@ -4,3 +4,4 @@ Information window for Enter the Gungeon, a rouge-like RPG with hundreds of uniq
 Push Log:
   - Initialization: 8/18/2023
   - Added Executable: 8/25/2023
+  - Update Synergies: 9/5/2023

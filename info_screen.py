@@ -105,6 +105,9 @@ class info_screen:
             synergy_data = s.find_all("li")
             
             for syn in synergy_data:
+                syn_image = syn.find("img", alt = True)
+                if syn_image == None or syn_image == "Synergy":
+                    continue
                 data = syn.text.split(" - ")
                 if len(data) != 2: #Info grabed is not a synergy
                     continue

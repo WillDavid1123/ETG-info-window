@@ -13,14 +13,20 @@ from bs4 import BeautifulSoup #External Library
 # from PIL import ImageTk, Image #External Library
 #   Helpful imports
 import pdb
+import os
 
 #Custom Class(es)
 from start_screen import start_screen
 
+#Grab current directory
+dir_path = os.path.dirname(os.path.realpath(__file__))
 
 if __name__ == "__main__":
     '''Start the main window and put it into an infinite loop'''
     root = Tk()
+    #Icon code currently not working with .exe
+    # icon = PhotoImage(file = dir_path + "/ETG_icon.png")
+    # root.iconphoto(True, icon)
     start_screen(root)
     root.mainloop()
 
@@ -42,3 +48,6 @@ if __name__ == "__main__":
         # gun_image = ttk.Label(mainframe, image=info["Gun Image"]).grid(column=1, row=4, rowspan=5, columnspan=5)
 
         # image = None #Holds image within table record/row# 
+
+# Create executable
+#   pyinstaller --onefile --windowed main.py
